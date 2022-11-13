@@ -14,5 +14,6 @@ WORKDIR /home/node/app
 COPY package*.json /home/node/app/
 RUN npm install
 COPY . /home/node/app/
+RUN chmod +x /home/node/app/index.js
 EXPOSE 8888
 CMD [ "node", "index.js" ]
